@@ -249,8 +249,8 @@ export default function Splash() {
         {renderSlides}
       </Stack>
       <Stack sx={{ color: "white", textAlign: "center", gap: "5px" }}>
-        <Typography variant="h1">Upright</Typography>
-        <Typography variant="subtitle1">Caring for each life, nurturing relationships,<br /> and promoting self-care</Typography>
+        <Typography variant="h1" fontSize={64}>Upright</Typography>
+        <Typography variant="subtitle1" fontWeight={500}>Caring for each life, nurturing relationships,<br /> and promoting self-care</Typography>
       </Stack>
       <Stack sx={{ width: "80%" }}>
         <Button size="large" variant="contained" endIcon={<SvgColor src="/assets/icons/untitled/ic-solar_arrow-narrow-right.svg" />} sx={{

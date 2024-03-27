@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { useTheme } from '@mui/material/styles';
-import { Box, Stack, Avatar, IconButton, ListItemText } from "@mui/material";
+import { Box, Stack, Avatar, IconButton, Typography, ListItemText } from "@mui/material";
 
 import SvgColor from "src/components/svg-color";
 
@@ -24,8 +24,8 @@ export default function NurseCard({ nurse }) {
     };
 
     const avatarStyles = {
-        width: 56,
-        height: 56,
+        width: 60,
+        height: 60,
     };
 
     const infoContainerStyles = {
@@ -82,9 +82,17 @@ export default function NurseCard({ nurse }) {
                                     <SvgColor src="/assets/icons/untitled/ic-mingcute_location-fill.svg" sx={iconStyles} />
                                     {nurse.distanceInKMs} KMs
                                 </Stack>
+                                &#8226;
                                 <Stack sx={secondaryItemStyles}>
                                     <SvgColor src="/assets/icons/untitled/ic-solar_user-check-01.svg" sx={iconStyles} />
-                                    {nurse.specialization}
+                                    <Typography variant='body2' sx={{
+                                        maxWidth: "100px",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                        whiteSpace: "nowrap"
+                                    }}>
+                                        {nurse.specialization}
+                                    </Typography>
                                 </Stack>
                             </Stack>
                         }

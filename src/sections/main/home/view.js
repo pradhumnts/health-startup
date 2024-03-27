@@ -26,8 +26,9 @@ const containerStyles = {
   display: "flex",
   justifyContent: "space-between",
   flexDirection: "row",
-  alignItems: "center",
+  alignItems: "flex-end",
   minHeight: 80,
+  paddingBottom: "12px"
 };
 
 const iconButtonStyles = {
@@ -197,7 +198,7 @@ export default function Home() {
 
         <Stack sx={{ gap: "24px" }}>
           <Typography variant="h4" fontWeight={500}>Nearby Nurses</Typography>
-          <Stack sx={{ gap: "16px" }}>
+          <Stack sx={{ gap: "20px" }}>
             {data.map(nurse =>
               <NurseCard nurse={nurse} />
             )}
